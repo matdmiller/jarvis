@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "jarvis"
+  site-url: "https://matdmiller.github.io/jarvis"
+  description: "A language model powered ai assistant."
+  repo-branch: main
+  repo-url: "https://github.com/matdmiller/jarvis"

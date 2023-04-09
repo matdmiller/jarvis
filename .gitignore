@@ -2,6 +2,9 @@
 secrets.py
 *secrets.py
 */secrets.py
+jarvis_secrets.py
+*jarvis_secrets.py
+*/jarvis_secrets.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

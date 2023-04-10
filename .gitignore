@@ -6,6 +6,10 @@ jarvis_secrets.py
 *jarvis_secrets.py
 */jarvis_secrets.py
 
+#nbdev
+_proc/
+_docs/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

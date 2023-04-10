@@ -3,18 +3,18 @@
 # %% auto 0
 __all__ = ['foo']
 
-# %% ../nbs/01_secrets.ipynb 4
+# %% ../nbs/01_secrets.ipynb 6
 import sys, os
 
-# %% ../nbs/01_secrets.ipynb 6
+# %% ../nbs/01_secrets.ipynb 8
 # caution: path[0] is reserved for script path (or '' in REPL)
 sys.path.insert(1, os.path.abspath(os.path.join(os.getcwd(), os.pardir)))
 
-# %% ../nbs/01_secrets.ipynb 7
+# %% ../nbs/01_secrets.ipynb 9
 try:
     import jarvis_secrets
 except:
     pass
 
-# %% ../nbs/01_secrets.ipynb 9
+# %% ../nbs/01_secrets.ipynb 12
 def foo(): pass

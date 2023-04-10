@@ -12,3 +12,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps: [uses: fastai/workflows/quarto-ghp@master]
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+      PINECONE_ENV: ${{ vars.PINECONE_ENV }}
+      PINECONE_TEST_NAMESPACE: ${{ vars.PINECONE_TEST_NAMESPACE }}

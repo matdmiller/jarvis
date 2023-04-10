@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://matdmiller.github.io/jarvis/core.html</loc>
+    <lastmod>2023-04-10T03:22:08.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://matdmiller.github.io/jarvis/secrets.html</loc>
+    <lastmod>2023-04-10T03:22:09.438Z</lastmod>
+  </url>
+  <url>
+    <loc>https://matdmiller.github.io/jarvis/openai_embeddings.html</loc>
+    <lastmod>2023-04-10T03:22:09.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://matdmiller.github.io/jarvis/index.html</loc>
+    <lastmod>2023-04-10T03:22:10.642Z</lastmod>
+  </url>
+  <url>
+    <loc>https://matdmiller.github.io/jarvis/python_repl.html</loc>
+    <lastmod>2023-04-10T03:22:11.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://matdmiller.github.io/jarvis/pinecone.html</loc>
+    <lastmod>2023-04-10T03:22:11.502Z</lastmod>
+  </url>
 </urlset>

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A language model powered ai assistant.">
+<meta name="description" content="Pinecone is a vector database. You can query it using vectors to find semantically similar other vectors quickly. Semantic search using vector databases is often used to locate relevant text that is added to llm prompts, enabling long term ‘memory’.">
 
-<title>jarvis</title>
+<title>jarvis - pinecone</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,11 +96,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="jarvis">
-<meta property="og:description" content="A language model powered ai assistant.">
+<meta property="og:title" content="jarvis - pinecone">
+<meta property="og:description" content="Pinecone is a vector database. You can query it using vectors to find semantically similar other vectors quickly. Semantic search using vector databases is often used to locate relevant text that is added to llm prompts, enabling long term ‘memory’.">
 <meta property="og:site-name" content="jarvis">
-<meta name="twitter:title" content="jarvis">
-<meta name="twitter:description" content="A language model powered ai assistant.">
+<meta name="twitter:title" content="jarvis - pinecone">
+<meta name="twitter:description" content="Pinecone is a vector database. You can query it using vectors to find semantically similar other vectors quickly. Semantic search using vector databases is often used to locate relevant text that is added to llm prompts, enabling long term ‘memory’.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">jarvis</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pinecone.html">pinecone</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -139,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">jarvis</span></a>
   </div>
 </li>
@@ -163,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pinecone.html" class="sidebar-item-text sidebar-link">
+  <a href="./pinecone.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">pinecone</span></a>
   </div>
 </li>
@@ -183,9 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
-  <li><a href="#todos" id="toc-todos" class="nav-link" data-scroll-target="#todos">Todos</a></li>
+  <li><a href="#foo" id="toc-foo" class="nav-link active" data-scroll-target="#foo">foo</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/matdmiller/jarvis/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -194,12 +192,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">jarvis</h1>
+<h1 class="title">pinecone</h1>
 </div>
 
 <div>
   <div class="description">
-    A language model powered ai assistant.
+    Pinecone is a vector database. You can query it using vectors to find semantically similar other vectors quickly. Semantic search using vector databases is often used to locate relevant text that is added to llm prompts, enabling long term ‘memory’.
   </div>
 </div>
 
@@ -215,37 +213,123 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<hr>
+<p><a href="https://github.com/matdmiller/jarvis/blob/main/jarvis/to_be_allocated1.py#L7" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="foo" class="level3">
+<h3 class="anchored" data-anchor-id="foo">foo</h3>
+<blockquote class="blockquote">
+<pre><code> foo ()</code></pre>
+</blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !cd .. &amp;&amp; pip install -e '.[dev]'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>EMBEDDING_LENGTH <span class="op">=</span> <span class="dv">1536</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jarvis</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> foo() <span class="op">==</span> <span class="va">None</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.embeddings.openai <span class="im">import</span> OpenAIEmbeddings</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.text_splitter <span class="im">import</span> CharacterTextSplitter</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.vectorstores <span class="im">import</span> Pinecone</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.document_loaders <span class="im">import</span> TextLoader</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.document_loaders <span class="im">import</span> TextLoader</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>loader <span class="op">=</span> TextLoader(<span class="st">'../examples/data/pg_essay_beyond_smart.txt'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>documents <span class="op">=</span> loader.load()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>text_splitter <span class="op">=</span> CharacterTextSplitter(chunk_size<span class="op">=</span><span class="dv">500</span>, chunk_overlap<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>docs <span class="op">=</span> text_splitter.split_documents(documents)[:<span class="dv">10</span>] <span class="co">#limit length to 10 for this example.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(docs))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> OpenAIEmbeddings()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Created a chunk of size 549, which is longer than the specified 500
+Created a chunk of size 667, which is longer than the specified 500
+Created a chunk of size 767, which is longer than the specified 500</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10</code></pre>
 </div>
 </div>
-</section>
-<section id="todos" class="level2">
-<h2 class="anchored" data-anchor-id="todos">Todos</h2>
-<ul>
-<li>Collect text</li>
-<li>Scrape text</li>
-<li>Clean text</li>
-<li>Split text</li>
-<li>Embed text</li>
-<li>Query text</li>
-<li>Inject queried text into prompt</li>
-<li></li>
-</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pinecone</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/opt/conda/envs/rapids/lib/python3.9/site-packages/pinecone/index.py:4: TqdmExperimentalWarning: Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to force console mode (e.g. in jupyter console)
+  from tqdm.autonotebook import tqdm</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize pinecone</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>pinecone.init(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    api_key<span class="op">=</span>PINECONE_API_KEY,  <span class="co"># find at app.pinecone.io</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    environment<span class="op">=</span>PINECONE_ENV  <span class="co"># next to api key in console</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>index_name <span class="op">=</span> <span class="st">"pinecone-index-1"</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>docsearch <span class="op">=</span> Pinecone.from_documents(docs, embeddings, index_name<span class="op">=</span>index_name, namespace<span class="op">=</span>PINECONE_TEST_NAMESPACE)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"What are the keys to being smart?"</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>docs <span class="op">=</span> docsearch.similarity_search(query)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(docs[<span class="dv">0</span>].page_content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Why do so many smart people fail to discover anything new? Viewed from that direction, the question seems a rather depressing one. But there's another way to look at it that's not just more optimistic, but more interesting as well. Clearly intelligence is not the only ingredient in having new ideas. What are the other ingredients? Are they things we could cultivate?</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pinecone</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pinecone.init(api_key<span class="op">=</span>PINECONE_API_KEY, environment<span class="op">=</span>PINECONE_ENV)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> pinecone.Index(<span class="st">"pinecone-index-1"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>query_response <span class="op">=</span> index.query(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    namespace<span class="op">=</span>PINECONE_TEST_NAMESPACE,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    top_k<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    include_values<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    include_metadata<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    vector<span class="op">=</span>[<span class="fl">0.1</span>]<span class="op">*</span><span class="dv">1536</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">filter</span><span class="op">=</span><span class="va">None</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(query_response.get(<span class="st">'matches'</span>,[])))</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># query_response</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10</code></pre>
+</div>
+</div>
+<p><strong>Pinecone query and response</strong></p>
+<pre><code>query_response = index.query(
+    namespace='',
+    top_k=10,
+    include_values=True,
+    include_metadata=True,
+    vector=[0.1]*1536,
+    filter=None
+)
+
+RESPONSE:
+{'matches': [{'id': '263a129b-e46d-4102-a093-379575b45947',
+              'metadata': {'source': '../examples/data/pg_essay_beyond_smart.txt',
+                           'text': 'Notes\n'
+                                   '\n'
+                                   '[1] What wins in conversation depends on '
+                                   'who with. It ranges from mere '
+                                   'aggressiveness at the bottom, through '
+                                   'quick-wittedness in the middle, to '
+                                   'something closer to actual intelligence at '
+                                   'the top, though probably always with some '
+                                   'component of quick-wittedness.'},
+              'score': -0.0292761475,
+              'values': [-0.0114761228,
+                         0.0137850493,
+                         -0.0456852466]}],
+ 'namespace': ''}</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ids <span class="op">=</span> []</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> query_result_item <span class="kw">in</span> query_response.get(<span class="st">'matches'</span>,[]):</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    ids.append(query_result_item[<span class="st">'id'</span>])</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(ids) <span class="op">&gt;</span> <span class="dv">0</span>: index.delete(ids<span class="op">=</span>ids, namespace<span class="op">=</span>PINECONE_TEST_NAMESPACE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

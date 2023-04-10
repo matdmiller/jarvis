@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "secrets.html",
+    "href": "secrets.html",
+    "title": "secrets",
+    "section": "",
+    "text": "#Check current directory - expected to be the notebook directory.\nprint(os.getcwd())\n#Check parent directory - should be the repo root directory which is where the jarvis_secrets.py file can be added for using your secrets.\nprint(os.path.abspath(os.path.join(os.getcwd(), os.pardir)))\n\n/home/mathewmiller/ebs1/fastai_2022p2/jarvis/nbs\n/home/mathewmiller/ebs1/fastai_2022p2/jarvis\n\n\n\nos.environ[\"PINECONE_TEST_NAMESPACE\"]\n\n'namespace_for_testing'\n\n\n\nsource\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "openai_embeddings.html",
+    "href": "openai_embeddings.html",
+    "title": "openai_embeddings",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "jarvis",
+    "section": "",
+    "text": "# !cd .. && pip install -e '.[dev]'\nThis file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "jarvis",
+    "section": "Install",
+    "text": "Install\npip install jarvis"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "jarvis",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\nassert foo() == None\n1+1\n\n2"
+  },
+  {
+    "objectID": "index.html#todos",
+    "href": "index.html#todos",
+    "title": "jarvis",
+    "section": "Todos",
+    "text": "Todos\n\nCollect text\nScrape text\nClean text\nSplit text\nEmbed text\nQuery text\nInject queried text into prompt"
+  },
+  {
+    "objectID": "python_repl.html",
+    "href": "python_repl.html",
+    "title": "python_repl",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()\n\n\nfrom langchain.utilities import PythonREPL\n\n\npython_repl = PythonREPL()\n\n\npython_repl.run(\"print(1+1)\")\n\n'2\\n'"
+  },
+  {
+    "objectID": "pinecone.html",
+    "href": "pinecone.html",
+    "title": "pinecone",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()\n\n\nEMBEDDING_LENGTH = 1536\n\n\nfrom langchain.embeddings.openai import OpenAIEmbeddings\nfrom langchain.text_splitter import CharacterTextSplitter\nfrom langchain.vectorstores import Pinecone\nfrom langchain.document_loaders import TextLoader\n\n\nfrom langchain.document_loaders import TextLoader\n\n\nloader = TextLoader('../examples/data/pg_essay_beyond_smart.txt')\ndocuments = loader.load()\ntext_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)\ndocs = text_splitter.split_documents(documents)[:10] #limit length to 10 for this example.\nprint(len(docs))\n\nembeddings = OpenAIEmbeddings()\n\nCreated a chunk of size 549, which is longer than the specified 500\nCreated a chunk of size 667, which is longer than the specified 500\nCreated a chunk of size 767, which is longer than the specified 500\n\n\n10\n\n\n\nimport pinecone\n\n/opt/conda/envs/rapids/lib/python3.9/site-packages/pinecone/index.py:4: TqdmExperimentalWarning: Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to force console mode (e.g. in jupyter console)\n  from tqdm.autonotebook import tqdm\n\n\n\n# initialize pinecone\npinecone.init(\n    api_key=PINECONE_API_KEY,  # find at app.pinecone.io\n    environment=PINECONE_ENV  # next to api key in console\n)\n\nindex_name = \"pinecone-index-1\"\n\ndocsearch = Pinecone.from_documents(docs, embeddings, index_name=index_name, namespace=PINECONE_TEST_NAMESPACE)\n\nquery = \"What are the keys to being smart?\"\ndocs = docsearch.similarity_search(query)\n\n\nprint(docs[0].page_content)\n\nWhy do so many smart people fail to discover anything new? Viewed from that direction, the question seems a rather depressing one. But there's another way to look at it that's not just more optimistic, but more interesting as well. Clearly intelligence is not the only ingredient in having new ideas. What are the other ingredients? Are they things we could cultivate?\n\n\n\nimport pinecone\n\n\npinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)\nindex = pinecone.Index(\"pinecone-index-1\")\n\nquery_response = index.query(\n    namespace=PINECONE_TEST_NAMESPACE,\n    top_k=10,\n    include_values=True,\n    include_metadata=True,\n    vector=[0.1]*1536,\n    filter=None\n)\nprint(len(query_response.get('matches',[])))\n# query_response\n\n10\n\n\nPinecone query and response\nquery_response = index.query(\n    namespace='',\n    top_k=10,\n    include_values=True,\n    include_metadata=True,\n    vector=[0.1]*1536,\n    filter=None\n)\n\nRESPONSE:\n{'matches': [{'id': '263a129b-e46d-4102-a093-379575b45947',\n              'metadata': {'source': '../examples/data/pg_essay_beyond_smart.txt',\n                           'text': 'Notes\\n'\n                                   '\\n'\n                                   '[1] What wins in conversation depends on '\n                                   'who with. It ranges from mere '\n                                   'aggressiveness at the bottom, through '\n                                   'quick-wittedness in the middle, to '\n                                   'something closer to actual intelligence at '\n                                   'the top, though probably always with some '\n                                   'component of quick-wittedness.'},\n              'score': -0.0292761475,\n              'values': [-0.0114761228,\n                         0.0137850493,\n                         -0.0456852466]}],\n 'namespace': ''}\n\nids = []\nfor query_result_item in query_response.get('matches',[]):\n    ids.append(query_result_item['id'])\nif len(ids) &gt; 0: index.delete(ids=ids, namespace=PINECONE_TEST_NAMESPACE)"
+  }
+]

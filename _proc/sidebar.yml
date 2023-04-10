@@ -1,0 +1,9 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_core.ipynb
+      - 01_secrets.ipynb
+      - 10_python_repl.ipynb
+      - 11_pinecone.ipynb
+      - 12_openai_embeddings.ipynb

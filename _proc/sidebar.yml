@@ -2,11 +2,9 @@ website:
   sidebar:
     contents:
       - index.ipynb
-      - 00_core.ipynb
+      - 00_core-Copy1.ipynb
       - 01_secrets.ipynb
+      - 02_basic_chat_gradio.ipynb
       - 10_python_repl.ipynb
       - 11_pinecone.ipynb
       - 12_openai_embeddings.ipynb
-      - nbdev.yml
-      - sidebar.yml
-      - styles.css

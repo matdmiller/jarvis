@@ -17,5 +17,4 @@ d = { 'settings': { 'branch': 'main',
             'jarvis.openai_embeddings': {'jarvis.openai_embeddings.foo': ('openai_embeddings.html#foo', 'jarvis/openai_embeddings.py')},
             'jarvis.pinecone': {'jarvis.pinecone.foo': ('pinecone.html#foo', 'jarvis/pinecone.py')},
             'jarvis.python_repl': {'jarvis.python_repl.foo': ('python_repl.html#foo', 'jarvis/python_repl.py')},
-            'jarvis.secrets': {'jarvis.secrets.foo': ('secrets.html#foo', 'jarvis/secrets.py')},
-            'jarvis.to_be_allocated1': {'jarvis.to_be_allocated1.foo': ('to_be_allocated1.html#foo', 'jarvis/to_be_allocated1.py')}}}
+            'jarvis.secrets': {'jarvis.secrets.foo': ('secrets.html#foo', 'jarvis/secrets.py')}}}

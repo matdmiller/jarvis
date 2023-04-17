@@ -9,6 +9,10 @@ _docs/
 
 #project specific ignores
 .langchain.db
+*/.chroma
+*/.chroma/*
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

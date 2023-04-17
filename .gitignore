@@ -7,6 +7,9 @@ jarvis_secrets.py
 _proc/
 _docs/
 
+#project specific ignores
+.langchain.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

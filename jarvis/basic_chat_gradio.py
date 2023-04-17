@@ -15,10 +15,7 @@ import json
 import gradio as gr
 import datetime
 
-# %% ../nbs/02_basic_chat_gradio.ipynb 7
-openai.api_key = os.environ["OPENAI_API_KEY"]
-
-# %% ../nbs/02_basic_chat_gradio.ipynb 18
+# %% ../nbs/02_basic_chat_gradio.ipynb 21
 def parse_codeblock(text):
     """Fixes how code blocks are displayed in the gradio chat window. 
     Ref: https://github.com/gradio-app/gradio/issues/3531"""
@@ -34,7 +31,7 @@ def parse_codeblock(text):
                 lines[i] = "<br/>" + line.replace("<", "&lt;").replace(">", "&gt;")
     return "".join(lines)
 
-# %% ../nbs/02_basic_chat_gradio.ipynb 20
+# %% ../nbs/02_basic_chat_gradio.ipynb 23
 def gradio_chat_history_to_openai_chat_completions_format(
     history:list[list[dict]] #Gradio chat history.
 )->list[dict]:
@@ -46,7 +43,7 @@ def gradio_chat_history_to_openai_chat_completions_format(
             chat_formatted_list.append({'role':'assistant', 'content': message_pair[1]})
     return chat_formatted_list
 
-# %% ../nbs/02_basic_chat_gradio.ipynb 21
+# %% ../nbs/02_basic_chat_gradio.ipynb 24
 def process_user_message(
     user_message:str, #Most recent message from user.
     history:list[list[str]] #Message history from gradio.Chatbot instance.
@@ -56,7 +53,7 @@ def process_user_message(
     # if history is None: history = []
     return "", history + [[user_message, None]]
 
-# %% ../nbs/02_basic_chat_gradio.ipynb 22
+# %% ../nbs/02_basic_chat_gradio.ipynb 25
 def process_bot_message(
     history:list[list[str]], #Message history from gradio.Chatbot instance.
     system_msg:str, #Most recent message from user.
@@ -80,13 +77,15 @@ def process_bot_message(
             # print(chunk)
             # print(chunk.get('choices',[{}])[0].get('delta',{}).get('content',''),end='')
             stream_results += chunk.get('choices',[{}])[0].get('delta',{}).get('content','')
-            history[-1][1] = parse_codeblock(stream_results)
+            # history[-1][1] = parse_codeblock(stream_results) #removed because gradio properly formats code blocks now
+            history[-1][1] = stream_results
             yield history
     else:
         # print(response)
         # print(response.get('choices',[{}])[0].get('message',{}).get('content',''))
         # print(parse_codeblock(response.get('choices',[{}])[0].get('message',{}).get('content','')))
-        history[-1][1] = parse_codeblock(response.get('choices',[{}])[0].get('message',{}).get('content',''))
+        # history[-1][1] = parse_codeblock(response.get('choices',[{}])[0].get('message',{}).get('content','')) #gradio fixed code blocks natively
+        history[-1][1] = response.get('choices',[{}])[0].get('message',{}).get('content','')
         # print(history)
         yield history
     # except:
